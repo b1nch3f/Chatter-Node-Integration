@@ -2,13 +2,14 @@
   "name": "node-js-getting-started",
   "version": "0.1.2",
   "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "~4.9.x",
-    "nforce": "^0.10.0"
+    "nforce": "^0.10.0",
+    "nforce-chatter": "0.0.1"
   },
   "engines": {
     "node": "0.10.x"

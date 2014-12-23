@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sfdc Chatter REST API Demo</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/app.css">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="MainCtrl">
+    <div class="row">
+        <div class="col-md-4">
+            <textarea class="form-control" rows="3" ng-model="chatterData"></textarea>
+            <button type="button" class="btn btn-primary" ng-click="postToChatter(chatterData)">Post to chatter</button>
+            <button type="button" class="btn btn-primary" ng-click="fetchChatterData()">Fetch chatter data</button>
+
+            <ul class="list-group comments">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- vendor -->
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-route/angular-route.min.js"></script>
+<script src="vendor/angular-resource/angular-resource.min.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- js -->
+<script src="app/app.js"></script>
+</body>
+</html>
