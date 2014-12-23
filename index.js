@@ -10,8 +10,8 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 
 var org = nforce.createConnection({
-  clientId: '3MVG9Y6d_Btp4xp5us8.2VCNA6ZDaw1gHR2B7NXlW.e.zDk__gfmO4VD_ntEvMC0ewAA4k3h3LRor_Oo5HIzG',
-  clientSecret: '738422846329630707',
+  clientId: '3MVG9Y6d_Btp4xp5us8.2VCNA6VUfSef13I2MetrlsJUVNn_q.6ioiaKEJT0rftLUmHo76ZNZaqZBtxVdgle.',
+  clientSecret: '4316823112659692181',
   redirectUri: 'https://radiant-meadow-4971.herokuapp.com/oauth/_callback'
 });
 
