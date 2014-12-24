@@ -11,8 +11,8 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 
 var org = nforce.createConnection({
-    clientId: '3MVG9Y6d_Btp4xp5us8.2VCNA6VUfSef13I2MetrlsJUVNn_q.6ioiaKEJT0rftLUmHo76ZNZaqZBtxVdgle.',
-    clientSecret: '4316823112659692181',
+    clientId: '3MVG9Y6d_Btp4xp5us8.2VCNA6VUfSef13I2M32FGrhjIHTjLyu0BVyCJi8Htv0QgP55b4Yozjd4KOKT1X7W_',
+    clientSecret: '6936064785633313339',
     redirectUri: 'http://localhost:3000/oauth/_callback',
     apiVersion: 'v32.0',  // optional, defaults to current salesforce API version
     environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
@@ -43,6 +43,14 @@ function routeHandler() {
             if (!err) {
                 console.log(resp);
                 response.json(resp);
+            }
+            if (err) console.log(err);
+        });
+    }).get('/postfeed', function(request, response) {
+        org.chatter.postFeedItem({id: 'a029000000O82e0', text: request.query.text, oauth: oauth}, function(err, resp) {
+            if (!err) {
+                console.log(resp);
+                response.json('success');
             }
             if (err) console.log(err);
         });

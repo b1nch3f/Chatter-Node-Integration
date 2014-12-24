@@ -14,6 +14,20 @@ app.controller('MainCtrl', function($scope, $http){
             });
     }
 
+    $scope.publishToChatter = function(chattertext) {
+        // Create new feed
+        console.log(chattertext);
+        $http({
+            url: 'http://localhost:3000/postfeed',
+            method: "GET",
+            params: {text: chattertext}
+        }).success(function(data, status, headers, config) {
+                console.log(data);
+        }).error(function(data, status, headers, config) {
+                console.log(data);
+        });
+    }
+
     $scope.fetchChatterData = function() {
         var commentBy, comment;
         // Fetch chatter posts

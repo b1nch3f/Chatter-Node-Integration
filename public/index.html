@@ -12,8 +12,8 @@
 <div class="container" ng-controller="MainCtrl">
     <div class="row">
         <div class="col-md-4">
-            <textarea class="form-control" rows="3" ng-model="chatterData"></textarea>
-            <button type="button" class="btn btn-primary" ng-click="postToChatter(chatterData)">Post to chatter</button>
+            <textarea class="form-control" rows="3" ng-model="chattertext"></textarea>
+            <button type="button" class="btn btn-primary" ng-click="publishToChatter(chattertext)">Post to chatter</button>
             <button type="button" class="btn btn-primary" ng-click="fetchChatterData()">Fetch chatter data</button>
 
             <ul class="list-group comments">
