@@ -13,5 +13,5 @@ $ npm start
 
 Your app should now be running on [localhost:3000](http://localhost:5000/).
 
-###Make necessary changes in the server.js to match with your org.
-#After i'm done putting a few more pieces it'll move it to heroku
+##Make necessary changes in the server.js to match with your org.
+###After i'm done putting a few more pieces it'll run in heroku
